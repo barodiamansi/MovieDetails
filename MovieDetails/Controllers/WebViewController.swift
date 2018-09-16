@@ -8,7 +8,6 @@
 
 import UIKit
 import WebKit
-import MBProgressHUD
 
 // Note: Even though WKWebView was introduced int iOS 8, there was a bug within it which wasn't resolved until iOS 11.
 // Bug was around NSCoding because of which the app was always crashing on initWithCoder during runtime. To avoid app crash
@@ -24,6 +23,15 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureWebView()
+        
+        // Add webview delegates
+        webView.uiDelegate = self
+        webView.navigationDelegate = self
+        self.loadURL()
+    }
+    
+    private func configureWebView() {
         let webConfiguration = WKWebViewConfiguration()
         let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 0.0, height: self.webViewContainer.frame.size.height))
         self.webView = WKWebView (frame: customFrame , configuration: webConfiguration)
@@ -34,9 +42,9 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         webView.leftAnchor.constraint(equalTo: webViewContainer.leftAnchor).isActive = true
         webView.bottomAnchor.constraint(equalTo: webViewContainer.bottomAnchor).isActive = true
         webView.heightAnchor.constraint(equalTo: webViewContainer.heightAnchor).isActive = true
-        webView.uiDelegate = self
-        webView.navigationDelegate = self
-        
+    }
+    
+    private func loadURL() {
         guard let url = articleURL else {
             return
         }
@@ -45,16 +53,16 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        self.showHUD(show: true)
+        HUDManager.showHUD(show: true, view: self.view)
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
-        self.showHUD(show: false)
+        HUDManager.showHUD(show: false, view: self.view)
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print("Webview did fail load with error: \(error)")
-        self.showHUD(show: false)
+        HUDManager.showHUD(show: false, view: self.view)
         
         let message: String = error.localizedDescription
         
@@ -69,7 +77,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         print("Webview did fail to navigate: \(error)")
-        self.showHUD(show: false)
+        HUDManager.showHUD(show: false, view: self.view)
         
         let message: String = error.localizedDescription
         
@@ -80,16 +88,5 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
             // use action here
         })
         self.present(alert, animated: true)
-    }
-    
-    private func showHUD(show: Bool) {
-        switch show {
-        case true:
-            let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
-            loadingNotification.mode = MBProgressHUDMode.indeterminate
-            loadingNotification.label.text = NSLocalizedString("loading", comment: "Activity indicator text")
-        case false:
-            MBProgressHUD.hide(for: self.view, animated: true)
-        }
     }
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 
 class MovieListViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var movieListTable: UITableView!
@@ -50,34 +49,23 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
     }
     
     private func loadReviews(searchText: String) {
-        self.showHUD(show: true)
+        self.movieListTable.separatorStyle = .none
+        HUDManager.showHUD(show: true, view: self.view)
         ServiceRequestor().getNYTimesMovies(page: currentPage, queryText: searchText, onSuccess: { reviews in
             if (reviews.count > 0) {
                 self.moviesList.append(contentsOf: reviews)
                 self.movieListTable.reloadData()
-                self.showHUD(show: false)
+                self.movieListTable.separatorStyle = .singleLine
+                HUDManager.showHUD(show: false, view: self.view)
                 self.currentPage += 1
             }
             else {
-                self.showHUD(show: false)
+                HUDManager.showHUD(show: false, view: self.view)
             }
         }, onFailure: { error in
-            self.showHUD(show: false)
+            HUDManager.showHUD(show: false, view: self.view)
             print(error)
         })
-    }
-    
-    private func showHUD(show: Bool) {
-        switch show {
-        case true:
-            movieListTable.separatorStyle = .none
-            let loadingNotification = MBProgressHUD.showAdded(to: self.view, animated: true)
-            loadingNotification.mode = MBProgressHUDMode.indeterminate
-            loadingNotification.label.text = NSLocalizedString("loading", comment: "Activity indicator text")
-        case false:
-            movieListTable.separatorStyle = .singleLine
-            MBProgressHUD.hide(for: self.view, animated: true)
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

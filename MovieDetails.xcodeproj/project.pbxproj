@@ -35,6 +35,7 @@
 		75641814214EE123003FC8FA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75641813214EE123003FC8FA /* Date+Extensions.swift */; };
 		75641817214EF727003FC8FA /* MovieInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75641819214EF727003FC8FA /* MovieInfoCell.xib */; };
 		7564181E214EF9B9003FC8FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7564181C214EF9B9003FC8FA /* Localizable.strings */; };
+		75641829214F0863003FC8FA /* HUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75641828214F0863003FC8FA /* HUDManager.swift */; };
 		75B19FC921458A23006514F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B19FC821458A23006514F3 /* AppDelegate.swift */; };
 		75B19FCB21458A23006514F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B19FCA21458A23006514F3 /* ViewController.swift */; };
 		75B19FCE21458A23006514F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B19FCC21458A23006514F3 /* Main.storyboard */; };
@@ -132,6 +133,7 @@
 		75641824214EFFBA003FC8FA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		75641825214EFFBB003FC8FA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		75641826214EFFBB003FC8FA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = MovieDetails/es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		75641828214F0863003FC8FA /* HUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDManager.swift; sourceTree = "<group>"; };
 		75B19FC521458A23006514F3 /* MovieDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B19FC821458A23006514F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75B19FCA21458A23006514F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		75641827214F0845003FC8FA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7564180721461837003FC8FA /* ApiKeys.swift */,
+				75641828214F0863003FC8FA /* HUDManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		75B19FBC21458A23006514F3 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +238,7 @@
 		75B19FC721458A23006514F3 /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
+				75641827214F0845003FC8FA /* Helper */,
 				7564180E214EC903003FC8FA /* Resources */,
 				75B19FFA21458AA8006514F3 /* Services */,
 				75B19FF921458A9E006514F3 /* Models */,
@@ -304,7 +316,6 @@
 				7505E70A21459DB400D9066E /* ServiceRequestor.swift */,
 				7505E70C21459DCF00D9066E /* ServiceRouter.swift */,
 				7505E70E21459EA500D9066E /* ServiceApiManager.swift */,
-				7564180721461837003FC8FA /* ApiKeys.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -459,6 +470,7 @@
 				7505E70D21459DCF00D9066E /* ServiceRouter.swift in Sources */,
 				7505E6E82145970400D9066E /* MovieInfoCell.swift in Sources */,
 				7564180821461837003FC8FA /* ApiKeys.swift in Sources */,
+				75641829214F0863003FC8FA /* HUDManager.swift in Sources */,
 				75641814214EE123003FC8FA /* Date+Extensions.swift in Sources */,
 				75B19FCB21458A23006514F3 /* ViewController.swift in Sources */,
 				7505E7232145A19C00D9066E /* MovieListViewController.swift in Sources */,
