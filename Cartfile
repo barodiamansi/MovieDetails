@@ -1,0 +1,13 @@
+# A clean and lightweight progress HUD.
+github "jdg/MBProgressHUD" ~> 1.0.0
+
+# An HTTP networking library written in Swift.
+github "Alamofire/Alamofire" ~> 4.7
+
+# AlamofireImage is an image component library for Alamofire
+github "Alamofire/AlamofireImage" ~> 3.3
+
+# An Alamofire extension which converts JSON response data into swift objects using ObjectMapper
+github "tristanhimmelman/AlamofireObjectMapper" ~> 5.0
+
+

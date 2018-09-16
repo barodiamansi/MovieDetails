@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  MovieDetails
+
+  Created by Mansi Barodia on 9/16/18.
+  Copyright © 2018 Mansi Barodia. All rights reserved.
+*/
+
+// Search bar text.
+"searchString" = "Chercher...";
+
+// Activity indicator text.
+"loading" = "Chargement...";
+
+// Author label text
+"author" = "Auteur";
+
+// Release/Opening date label text
+"release date" = "Date de sortie";
+
+// MPAA rating label text
+"mpaa rating" = "Classement MPAA";
+
+// tba label text
+"tba" = "Être annoncé";
+
+// web view failed to load alert title
+"load failed" = "Échec du chargement";
+
+// web view failed to navigate alert title
+"navigate failed" = "Impossible de naviguer";
+
+// Ok button text
+"ok" = "D'accord";

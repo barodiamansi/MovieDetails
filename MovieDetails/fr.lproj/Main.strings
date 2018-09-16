@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "Kco-gX-yzS"; */
+"Kco-gX-yzS.text" = "Summary";
+
+/* Class = "UILabel"; text = "Headline"; ObjectID = "SWu-94-1Ea"; */
+"SWu-94-1Ea.text" = "Headline";
+
+/* Class = "UILabel"; text = "Web text"; ObjectID = "VkK-rD-PmA"; */
+"VkK-rD-PmA.text" = "Web text";
+
+/* Class = "UILabel"; text = "Author"; ObjectID = "dZ9-eg-bKK"; */
+"dZ9-eg-bKK.text" = "Author";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "lAf-w9-YSE"; */
+"lAf-w9-YSE.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Movies"; ObjectID = "ofp-Qa-Xko"; */
+"ofp-Qa-Xko.title" = "Movies";
+
+/* Class = "UILabel"; text = "Opening(release) date"; ObjectID = "sxn-jj-yGq"; */
+"sxn-jj-yGq.text" = "Opening(release) date";
+
+/* Class = "UILabel"; text = "MPAA rating"; ObjectID = "xwN-bA-cXZ"; */
+"xwN-bA-cXZ.text" = "MPAA rating";
