@@ -31,6 +31,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         self.loadURL()
     }
     
+    // Configures the webview and adds it as a subview to the view.
     private func configureWebView() {
         let webConfiguration = WKWebViewConfiguration()
         let customFrame = CGRect.init(origin: CGPoint.zero, size: CGSize.init(width: 0.0, height: self.webViewContainer.frame.size.height))
@@ -44,6 +45,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         webView.heightAnchor.constraint(equalTo: webViewContainer.heightAnchor).isActive = true
     }
     
+    // Loads provided URL on the webview.
     private func loadURL() {
         guard let url = articleURL else {
             return
@@ -51,11 +53,11 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         let myRequest = URLRequest(url: url)
         webView.load(myRequest)
     }
-    
+
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         HUDManager.showHUD(show: true, view: self.view)
     }
-    
+
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         HUDManager.showHUD(show: false, view: self.view)
     }
@@ -64,29 +66,17 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         print("Webview did fail load with error: \(error)")
         HUDManager.showHUD(show: false, view: self.view)
         
-        let message: String = error.localizedDescription
-        
+        // Presents an alert with error message.
         let loadFailText = NSLocalizedString("load failed", comment: "Web view failed to load text")
-        let alert = UIAlertController(title: "\(loadFailText)", message: message, preferredStyle: .alert)
-        let okText = NSLocalizedString("ok", comment: "Ok button text")
-        alert.addAction(UIAlertAction(title: "\(okText)", style: .default) { action in
-            // use action here
-        })
-        self.present(alert, animated: true)
+        self.present(AlertManager.createAlert(title: loadFailText, errorMessage: error.localizedDescription), animated: true)
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         print("Webview did fail to navigate: \(error)")
         HUDManager.showHUD(show: false, view: self.view)
         
-        let message: String = error.localizedDescription
-        
+        // Presents an alert with error message.
         let navigateFailText = NSLocalizedString("navigate failed", comment: "Web view failed to navigate text")
-        let alert = UIAlertController(title: "\(navigateFailText)", message: message, preferredStyle: .alert)
-        let okText = NSLocalizedString("ok", comment: "Ok button text")
-        alert.addAction(UIAlertAction(title: "\(okText)", style: .default) { action in
-            // use action here
-        })
-        self.present(alert, animated: true)
+        self.present(AlertManager.createAlert(title: navigateFailText, errorMessage: error.localizedDescription), animated: true)
     }
 }

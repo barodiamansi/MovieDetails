@@ -36,6 +36,7 @@
 		75641817214EF727003FC8FA /* MovieInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75641819214EF727003FC8FA /* MovieInfoCell.xib */; };
 		7564181E214EF9B9003FC8FA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7564181C214EF9B9003FC8FA /* Localizable.strings */; };
 		75641829214F0863003FC8FA /* HUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75641828214F0863003FC8FA /* HUDManager.swift */; };
+		7564182B214F1068003FC8FA /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7564182A214F1068003FC8FA /* AlertManager.swift */; };
 		75B19FC921458A23006514F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B19FC821458A23006514F3 /* AppDelegate.swift */; };
 		75B19FCB21458A23006514F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B19FCA21458A23006514F3 /* ViewController.swift */; };
 		75B19FCE21458A23006514F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B19FCC21458A23006514F3 /* Main.storyboard */; };
@@ -134,6 +135,7 @@
 		75641825214EFFBB003FC8FA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		75641826214EFFBB003FC8FA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = MovieDetails/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		75641828214F0863003FC8FA /* HUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDManager.swift; sourceTree = "<group>"; };
+		7564182A214F1068003FC8FA /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		75B19FC521458A23006514F3 /* MovieDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B19FC821458A23006514F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75B19FCA21458A23006514F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			children = (
 				7564180721461837003FC8FA /* ApiKeys.swift */,
 				75641828214F0863003FC8FA /* HUDManager.swift */,
+				7564182A214F1068003FC8FA /* AlertManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7564182B214F1068003FC8FA /* AlertManager.swift in Sources */,
 				7505E7252145A1AE00D9066E /* MovieDetailsViewController.swift in Sources */,
 				7505E7272145A1BE00D9066E /* WebViewController.swift in Sources */,
 				7505E7292145B77E00D9066E /* UITableViewCell+ReusableID.swift in Sources */,

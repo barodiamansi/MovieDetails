@@ -25,9 +25,10 @@ class MovieInfoCell: UITableViewCell {
     
     movieTitle.text = movieDetail.title
     headlineLabel.text = movieDetail.headline
+    
     let date = movieDetail.releaseDate as String?
     let releaseDateText = NSLocalizedString("release date", comment: "Release date label text")
     let tbaText = NSLocalizedString("tba", comment: "TBA text")
-    releaseDateLabel.text = "\(releaseDateText): \(String(describing: date != "" ? Date.getMMMddyyyyDateFormat(date!) : "\(tbaText)" ))"
+    releaseDateLabel.text = "\(releaseDateText): \(date != "" ? Date.getMMMddyyyyDateFormat(date!)! : "\(tbaText)")"
   }
 }

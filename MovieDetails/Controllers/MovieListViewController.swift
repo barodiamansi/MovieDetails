@@ -30,7 +30,10 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // Clear the array and the table view and set page as 0.
         self.moviesList.removeAll()
+        self.movieListTable.reloadData()
+        searchBar.resignFirstResponder() 
         currentPage = 0
         loadReviews(searchText: searchBar.text!)
     }
@@ -44,10 +47,16 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
         return false
     }
     
+    // Registers the nil with reusable ID.
     private func registerNibs() {
         movieListTable.register(UINib(nibName: MovieInfoCell.reusableID, bundle: nil), forCellReuseIdentifier: MovieInfoCell.reusableID)
     }
     
+    /**
+     Handles sending the request and then displaying the data on table view in case of a successful response from service request or displays an alert incase of failure.
+     
+     - Parameter searchText: User input text to query for the movies.
+     */
     private func loadReviews(searchText: String) {
         self.movieListTable.separatorStyle = .none
         HUDManager.showHUD(show: true, view: self.view)
@@ -63,16 +72,11 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
                 HUDManager.showHUD(show: false, view: self.view)
             }
         }, onFailure: { error in
-            HUDManager.showHUD(show: false, view: self.view)
             print(error)
+            HUDManager.showHUD(show: false, view: self.view)
+            let loadFailText = NSLocalizedString("load failed", comment: "Service request failed")
+            self.present(AlertManager.createAlert(title: loadFailText, errorMessage: error.localizedDescription), animated: true)
         })
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "movieDetails" {
-            let controller = (segue.destination as? MovieDetailsViewController)!
-            controller.movieDetails = sender as? MovieDetailsData
-        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -94,6 +98,14 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
         let lastCell = moviesList.count - 1
         if lastCell == indexPath.row {
             loadReviews(searchText: searchBar.text!)
+        }
+    }
+    
+    // Navigates to details controller with movie details data.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "movieDetails" {
+            let controller = (segue.destination as? MovieDetailsViewController)!
+            controller.movieDetails = sender as? MovieDetailsData
         }
     }
 }

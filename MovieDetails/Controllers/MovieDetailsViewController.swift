@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Displays the details of individual movi selected by the user. Returns back if the movie details object is nil.
 class MovieDetailsViewController: UITableViewController {
     var movieDetails: MovieDetailsData?
     @IBOutlet weak var titleLabel: UILabel!
@@ -19,6 +20,7 @@ class MovieDetailsViewController: UITableViewController {
     @IBOutlet weak var articleURLLabel: UILabel!
     @IBOutlet weak var mpaaRatingLabel: UILabel!
     
+    // Displays data on the UI elements.
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let review = movieDetails else {
@@ -36,11 +38,10 @@ class MovieDetailsViewController: UITableViewController {
         
         let authorText = NSLocalizedString("author", comment: "Author label text")
         authorLabel.text = "\(authorText): \(review.author)"
-        
-        let date = review.releaseDate as String?
+    
         let releaseDateText = NSLocalizedString("release date", comment: "Release date label text")
         let tbaText = NSLocalizedString("tba", comment: "TBA text")
-        releaseDateLabel.text = "\(releaseDateText): \(String(describing: date != "" ? Date.getMMMddyyyyDateFormat(date!) : "\(tbaText)"))"
+        releaseDateLabel.text = "\(releaseDateText): \(String(describing: review.releaseDate != "" ? Date.getMMMddyyyyDateFormat(review.releaseDate)! : "\(tbaText)"))"
         
         summaryLabel.text = review.summary
         
@@ -49,6 +50,7 @@ class MovieDetailsViewController: UITableViewController {
         articleURLLabel.text = "\(review.articleText) >>"
     }
     
+    // Navigates on the webview when article URL is clicked.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "webPage" {
             let controller = (segue.destination as? WebViewController)!
