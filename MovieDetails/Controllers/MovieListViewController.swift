@@ -10,23 +10,19 @@ import UIKit
 
 class MovieListViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var movieListTable: UITableView!
-    
-    let searchBar:UISearchBar = UISearchBar()
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var stackView: UIStackView!
     
     var moviesList = [MovieDetailsData]()
     var currentPage = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
-        searchBar.searchBarStyle = UISearchBarStyle.prominent
         searchBar.placeholder = NSLocalizedString("searchString", comment: "Search bar string")
-        searchBar.sizeToFit()
         searchBar.isTranslucent = false
-        searchBar.backgroundImage = UIImage()
         self.movieListTable.dataSource = self
         self.movieListTable.delegate = self
         searchBar.delegate = self
-        self.movieListTable.tableHeaderView = searchBar
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
