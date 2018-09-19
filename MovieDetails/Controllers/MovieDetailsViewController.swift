@@ -55,6 +55,7 @@ class MovieDetailsViewController: UITableViewController {
         if segue.identifier == "webPage" {
             let controller = (segue.destination as? WebViewController)!
             controller.articleURL = movieDetails?.articleURL
+            controller.navigationItem.title = NSLocalizedString("article_title", comment: "Movie article view title")
         }
     }
 }

@@ -32,3 +32,12 @@
 
 // Ok button text
 "ok" = "D'accord";
+
+// Movie list view title
+"movies_list_view_title" = "Films";
+
+// Movie details view title
+"movie_details_view_title" = "Détails du film";
+
+// Web view title
+"article_title" = "Article";

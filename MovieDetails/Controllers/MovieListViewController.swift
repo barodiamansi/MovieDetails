@@ -13,8 +13,12 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var stackView: UIStackView!
     
+    // Hold the movies list received as part of the response.
     var moviesList = [MovieDetailsData]()
+    
+    // Used for paging. Will be increased as and when a response is received.
     var currentPage = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNibs()
@@ -23,24 +27,27 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
         self.movieListTable.dataSource = self
         self.movieListTable.delegate = self
         searchBar.delegate = self
+        
+        self.navigationItem.title = NSLocalizedString("movies_list_view_title", comment: "Movie list title")
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // Clear the array and the table view and set page as 0.
+        // Clear the movie list, the table view and set page count back to 0.
         self.moviesList.removeAll()
         self.movieListTable.reloadData()
-        searchBar.resignFirstResponder() 
+        searchBar.resignFirstResponder()
         currentPage = 0
         loadReviews(searchText: searchBar.text!)
     }
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        // Clears out the table view when cancel on search bar is clicked.
         if (searchBar.text?.count == 0) {
+            self.moviesList.removeAll()
             self.movieListTable.reloadData()
-            return true
+            self.movieListTable.separatorStyle = .none
         }
-        
-        return false
+        return true
     }
     
     // Registers the nil with reusable ID.
@@ -102,6 +109,7 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
         if segue.identifier == "movieDetails" {
             let controller = (segue.destination as? MovieDetailsViewController)!
             controller.movieDetails = sender as? MovieDetailsData
+            controller.navigationItem.title = NSLocalizedString("movie_details_view_title", comment: "Movie details title")
         }
     }
 }
