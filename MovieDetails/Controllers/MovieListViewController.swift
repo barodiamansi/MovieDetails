@@ -52,7 +52,7 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
     
     // Registers the nil with reusable ID.
     private func registerNibs() {
-        movieListTable.register(UINib(nibName: MovieInfoCell.reusableID, bundle: nil), forCellReuseIdentifier: MovieInfoCell.reusableID)
+        self.movieListTable.register(UINib(nibName: MovieInfoCell.reusableID, bundle: nil), forCellReuseIdentifier: MovieInfoCell.reusableID)
     }
     
     /**
