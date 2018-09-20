@@ -26,7 +26,7 @@ class ErrorManager {
         case 503:
             return "Service Unavailable - Server not responding maybe due to overloading or is under maintenance."
         default:
-            return "Response returned with an error. Unhandled error code."
+            return "Response returned with an error. Unhandled error code - \(httpCode)"
         }
     }
 }

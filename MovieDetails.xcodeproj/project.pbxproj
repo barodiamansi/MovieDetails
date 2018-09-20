@@ -46,6 +46,8 @@
 		75B19FDE21458A26006514F3 /* MovieDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B19FDD21458A26006514F3 /* MovieDetailsTests.swift */; };
 		75B19FE921458A26006514F3 /* MovieDetailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B19FE821458A26006514F3 /* MovieDetailsUITests.swift */; };
 		75B19FFC21458CDE006514F3 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 75B19FFB21458CDE006514F3 /* Cartfile */; };
+		75EB214E21533DD800A772AF /* ErrorManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB214D21533DD800A772AF /* ErrorManagerTests.swift */; };
+		75EB21522153404F00A772AF /* MovieDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EB21512153404F00A772AF /* MovieDetailsViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +154,8 @@
 		75B19FE821458A26006514F3 /* MovieDetailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsUITests.swift; sourceTree = "<group>"; };
 		75B19FEA21458A26006514F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75B19FFB21458CDE006514F3 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		75EB214D21533DD800A772AF /* ErrorManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManagerTests.swift; sourceTree = "<group>"; };
+		75EB21512153404F00A772AF /* MovieDetailsViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,8 +267,10 @@
 		75B19FDC21458A26006514F3 /* MovieDetailsTests */ = {
 			isa = PBXGroup;
 			children = (
+				75EB21512153404F00A772AF /* MovieDetailsViewControllerTests.swift */,
 				75B19FDD21458A26006514F3 /* MovieDetailsTests.swift */,
 				75B19FDF21458A26006514F3 /* Info.plist */,
+				75EB214D21533DD800A772AF /* ErrorManagerTests.swift */,
 			);
 			path = MovieDetailsTests;
 			sourceTree = "<group>";
@@ -491,6 +497,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EB214E21533DD800A772AF /* ErrorManagerTests.swift in Sources */,
+				75EB21522153404F00A772AF /* MovieDetailsViewControllerTests.swift in Sources */,
 				75B19FDE21458A26006514F3 /* MovieDetailsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
