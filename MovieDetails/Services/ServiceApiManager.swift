@@ -14,7 +14,7 @@ struct ServiceApiManager {
     static let baseURL = "https://api.nytimes.com/svc/movies/v2"
     
     // Api key required to access the API.
-    static let key = ApiKeys.valueForAPIKey(fileName: "keys", keyName: "MovieReviewAPIKey")
+    static let key = ApiKeysManager.valueForAPIKey(fileName: "keys", keyName: "MovieReviewAPIKey")
     
     // Number of results that would be returned per call.
     static let resultsPerPage = 20

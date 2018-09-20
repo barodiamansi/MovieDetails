@@ -9,7 +9,7 @@
 import Foundation
 
 // Wrapper for obtaining key value from keys.plist. Valid key name is required.
-class ApiKeys {
+class ApiKeysManager {
     /**
      Looks for the keyname in keys plist file and returns value of it.
      

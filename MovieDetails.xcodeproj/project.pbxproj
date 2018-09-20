@@ -29,7 +29,7 @@
 		751F8F1D2151D17B00A1D7EB /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F8F1C2151D17B00A1D7EB /* UIViewController+Extensions.swift */; };
 		751F8F1F2151DA0B00A1D7EB /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F8F1E2151DA0B00A1D7EB /* ErrorManager.swift */; };
 		75641806214617EC003FC8FA /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75641805214617EC003FC8FA /* keys.plist */; };
-		7564180821461837003FC8FA /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7564180721461837003FC8FA /* ApiKeys.swift */; };
+		7564180821461837003FC8FA /* ApiKeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7564180721461837003FC8FA /* ApiKeysManager.swift */; };
 		7564180A214621CF003FC8FA /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75641809214621CF003FC8FA /* MBProgressHUD.framework */; };
 		7564180B214621CF003FC8FA /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 75641809214621CF003FC8FA /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7564180D214621E9003FC8FA /* MBProgressHUD.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7564180C214621E9003FC8FA /* MBProgressHUD.framework.dSYM */; };
@@ -120,7 +120,7 @@
 		751F8F1C2151D17B00A1D7EB /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		751F8F1E2151DA0B00A1D7EB /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
 		75641805214617EC003FC8FA /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
-		7564180721461837003FC8FA /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
+		7564180721461837003FC8FA /* ApiKeysManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeysManager.swift; sourceTree = "<group>"; };
 		75641809214621CF003FC8FA /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MBProgressHUD.framework; sourceTree = "<group>"; };
 		7564180C214621E9003FC8FA /* MBProgressHUD.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = MBProgressHUD.framework.dSYM; sourceTree = "<group>"; };
 		75641811214ECD63003FC8FA /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 		75641827214F0845003FC8FA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				7564180721461837003FC8FA /* ApiKeys.swift */,
+				7564180721461837003FC8FA /* ApiKeysManager.swift */,
 				75641828214F0863003FC8FA /* HUDManager.swift */,
 				751F8F1E2151DA0B00A1D7EB /* ErrorManager.swift */,
 			);
@@ -477,7 +477,7 @@
 				7505E70721459C9E00D9066E /* MovieDetailsData.swift in Sources */,
 				7505E70D21459DCF00D9066E /* ServiceRouter.swift in Sources */,
 				7505E6E82145970400D9066E /* MovieInfoCell.swift in Sources */,
-				7564180821461837003FC8FA /* ApiKeys.swift in Sources */,
+				7564180821461837003FC8FA /* ApiKeysManager.swift in Sources */,
 				75641829214F0863003FC8FA /* HUDManager.swift in Sources */,
 				75641814214EE123003FC8FA /* Date+Extensions.swift in Sources */,
 				75B19FCB21458A23006514F3 /* ViewController.swift in Sources */,
