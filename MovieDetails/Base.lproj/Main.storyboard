@@ -237,10 +237,10 @@
             </objects>
             <point key="canvasLocation" x="1324" y="116"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Article Web View Controller-->
         <scene sceneID="K0v-W5-xyw">
             <objects>
-                <viewController id="5RS-rh-pzq" customClass="WebViewController" customModule="MovieDetails" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5RS-rh-pzq" customClass="ArticleWebViewController" customModule="MovieDetails" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UsX-19-h95">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

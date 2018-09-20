@@ -24,7 +24,7 @@
 		7505E7202145A0E400D9066E /* ObjectMapper.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7505E6FE21459AF400D9066E /* ObjectMapper.framework.dSYM */; };
 		7505E7232145A19C00D9066E /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505E7222145A19C00D9066E /* MovieListViewController.swift */; };
 		7505E7252145A1AE00D9066E /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505E7242145A1AE00D9066E /* MovieDetailsViewController.swift */; };
-		7505E7272145A1BE00D9066E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505E7262145A1BE00D9066E /* WebViewController.swift */; };
+		7505E7272145A1BE00D9066E /* ArticleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505E7262145A1BE00D9066E /* ArticleWebViewController.swift */; };
 		7505E7292145B77E00D9066E /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7505E7282145B77E00D9066E /* UITableViewCell+Extensions.swift */; };
 		751F8F1D2151D17B00A1D7EB /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F8F1C2151D17B00A1D7EB /* UIViewController+Extensions.swift */; };
 		751F8F1F2151DA0B00A1D7EB /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751F8F1E2151DA0B00A1D7EB /* ErrorManager.swift */; };
@@ -117,7 +117,7 @@
 		7505E70E21459EA500D9066E /* ServiceApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceApiManager.swift; sourceTree = "<group>"; };
 		7505E7222145A19C00D9066E /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
 		7505E7242145A1AE00D9066E /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
-		7505E7262145A1BE00D9066E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		7505E7262145A1BE00D9066E /* ArticleWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleWebViewController.swift; sourceTree = "<group>"; };
 		7505E7282145B77E00D9066E /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		751F8F1C2151D17B00A1D7EB /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		751F8F1E2151DA0B00A1D7EB /* ErrorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorManager.swift; sourceTree = "<group>"; };
@@ -308,7 +308,7 @@
 			children = (
 				7505E7222145A19C00D9066E /* MovieListViewController.swift */,
 				7505E7242145A1AE00D9066E /* MovieDetailsViewController.swift */,
-				7505E7262145A1BE00D9066E /* WebViewController.swift */,
+				7505E7262145A1BE00D9066E /* ArticleWebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -475,7 +475,7 @@
 			files = (
 				7505E7252145A1AE00D9066E /* MovieDetailsViewController.swift in Sources */,
 				751F8F1F2151DA0B00A1D7EB /* ErrorManager.swift in Sources */,
-				7505E7272145A1BE00D9066E /* WebViewController.swift in Sources */,
+				7505E7272145A1BE00D9066E /* ArticleWebViewController.swift in Sources */,
 				7505E7292145B77E00D9066E /* UITableViewCell+Extensions.swift in Sources */,
 				7505E70F21459EA600D9066E /* ServiceApiManager.swift in Sources */,
 				751F8F1D2151D17B00A1D7EB /* UIViewController+Extensions.swift in Sources */,

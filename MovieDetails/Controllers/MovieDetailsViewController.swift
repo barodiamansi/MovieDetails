@@ -53,7 +53,7 @@ class MovieDetailsViewController: UITableViewController {
     // Navigates on the webview when article URL is clicked.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "webPage" {
-            let controller = (segue.destination as? WebViewController)!
+            let controller = (segue.destination as? ArticleWebViewController)!
             controller.articleURL = movieDetails?.articleURL
             controller.navigationItem.title = NSLocalizedString("article_title", comment: "Movie article view title")
         }

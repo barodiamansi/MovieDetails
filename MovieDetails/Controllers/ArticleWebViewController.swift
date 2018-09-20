@@ -1,5 +1,5 @@
 //
-//  WebViewController.swift
+//  ArticleWebViewController.swift
 //  MovieDetails
 //
 //  Created by Mansi Barodia on 9/9/18.
@@ -12,7 +12,7 @@ import WebKit
 // Note: Even though WKWebView was introduced int iOS 8, there was a bug within it which wasn't resolved until iOS 11.
 // Bug was around NSCoding because of which the app was always crashing on initWithCoder during runtime. To avoid app crash
 // Apple prevented letting developers configure WKWebView within IB. It would present the error - "WKWebView NSCoding support was broken in previous versions" if you would try to do so.
-class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+class ArticleWebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     var webView: WKWebView!
     var articleURL: URL?
     @IBOutlet var webViewContainer: UIView!
