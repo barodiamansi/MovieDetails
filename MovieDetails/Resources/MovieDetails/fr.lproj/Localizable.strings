@@ -41,3 +41,27 @@
 
 // Web view title
 "article_title" = "Article";
+
+// Bad request text
+"bad request" = "Mauvaise demande - La requête ne peut pas être satisfaite en raison d'une syntaxe incorrecte.";
+
+// Unauthorized text
+"unauthorized" = "Non autorisé - La demande nécessite une autorisation.";
+
+// Forbidden text
+"forbidden" = "Interdit - Refusé de remplir la demande.";
+
+// Not Found text
+"not found" = "Non trouvé - Aucun résultat correspondant n'a été trouvé.";
+
+// Timeout text
+"timeout" = "Timeout - La demande n'a pas été produite dans un délai défini.";
+
+// Server error text
+"server error" = "Erreur interne du serveur - Le serveur a rencontré une condition inattendue.";
+
+// Service unavailable text
+"service unavailable" = "Service non disponible - Le serveur ne répond pas, peut-être en raison d'une surcharge ou d'une maintenance.";
+
+// Default error text
+"default error" = "La réponse est retournée avec une erreur. Code d'erreur non géré.";

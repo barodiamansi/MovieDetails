@@ -74,11 +74,11 @@ class MovieListViewController: UIViewController, UISearchBarDelegate, UITableVie
             else {
                 HUDManager.showHUD(show: false, view: self.view)
             }
-        }, onFailure: { error in
-            print(error)
+        }, onFailure: { errorDisplayString in
+            print(errorDisplayString)
             HUDManager.showHUD(show: false, view: self.view)
             let loadFailText = NSLocalizedString("load failed", comment: "Service request failed")
-            self.present(AlertManager.createAlert(title: loadFailText, errorMessage: error.localizedDescription), animated: true)
+            self.displayAlert(title: loadFailText, errorMessage: errorDisplayString)
         })
     }
     

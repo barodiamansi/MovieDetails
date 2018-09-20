@@ -20,7 +20,7 @@ class ServiceRequestor {
      - Parameter onSuccess: Callback in case of successfull response.
      - Parameter onFailure: Callback in case of failed response.
      */
-    func getNYTimesMovies(page: Int, queryText: String, onSuccess: @escaping([MovieDetailsData]) -> Void, onFailure: @escaping(Error) -> Void) {
+    func getNYTimesMovies(page: Int, queryText: String, onSuccess: @escaping([MovieDetailsData]) -> Void, onFailure: @escaping(String) -> Void) {
         Alamofire.request(ServiceRouter.getNYTimesMovies(page: page, queryText: queryText))
             .validate()
             .responseObject { (response: DataResponse<MovieDetailsResponse>) in
@@ -31,7 +31,14 @@ class ServiceRequestor {
                         onSuccess(moviesList)
                     }
                 case .failure(let error):
-                    onFailure(error)
+                    var errorDisplayString = ""
+                    if let statusCode = response.response?.statusCode {
+                        errorDisplayString = ErrorManager.errorDisplayString(httpCode: statusCode)
+                    }
+                    else {
+                        errorDisplayString = error.localizedDescription
+                    }
+                    onFailure(errorDisplayString)
                 }
         }
     }

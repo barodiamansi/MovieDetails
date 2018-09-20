@@ -68,7 +68,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         
         // Presents an alert with error message.
         let loadFailText = NSLocalizedString("load failed", comment: "Web view failed to load text")
-        self.present(AlertManager.createAlert(title: loadFailText, errorMessage: error.localizedDescription), animated: true)
+        self.displayAlert(title: loadFailText, errorMessage: error.localizedDescription)
     }
     
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
@@ -77,6 +77,6 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         
         // Presents an alert with error message.
         let navigateFailText = NSLocalizedString("navigate failed", comment: "Web view failed to navigate text")
-        self.present(AlertManager.createAlert(title: navigateFailText, errorMessage: error.localizedDescription), animated: true)
+        self.displayAlert(title: navigateFailText, errorMessage: error.localizedDescription)
     }
 }

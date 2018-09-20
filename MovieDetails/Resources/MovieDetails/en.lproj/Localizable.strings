@@ -41,3 +41,27 @@
 
 // Web view title
 "article_title" = "Article";
+
+// Bad request text
+"bad request" = "Bad Request - Request cannot be fulfilled due to malformed syntax.";
+
+// Unauthorized text
+"unauthorized" = "Unauthorized - Request requires authorization.";
+
+// Forbidden text
+"forbidden" = "Forbidden - Refused to fulfil the request.";
+
+// Not Found text
+"not found" = "Not found - No matching results were found.";
+
+// Timeout text
+"timeout" = "Timeout - Request was not produced within definite time.";
+
+// Server error text
+"server error" = "Internal Server Error - Server encountered unexpected condition.";
+
+// Service unavailable text
+"service unavailable" = "Service Unavailable - Server not responding maybe due to overloading or is under maintenance.";
+
+// Default error text
+"default error" = "Response returned with an error. Unhandled error code.";
